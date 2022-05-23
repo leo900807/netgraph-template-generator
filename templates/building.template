@@ -1,0 +1,36 @@
+<!-- {% dorm_name %} -->
+<!-- Current Percentage: {% percentage %} % -->
+<!-- Current Total: {% total %} MB/s -->
+<!-- Max: {% mx %} MB/s -->
+<!-- Timestamp: {% timestamp %} -->
+
+<script>
+    //Handle click on polygon
+    var onPolyClick = function (event) {
+        //callFancyboxIframe('flrs.html')
+        var label = event.target.options.label;
+        var content = event.target.options.popup;
+        var otherStuff = event.target.options.otherStuff;
+        if (event.target.options.color == 'red') {
+            event.target.setStyle({ 'color': 'blue' });
+        }
+        else {
+            event.target.setStyle({ 'color': 'red' });
+        }
+    };
+
+    //Create polygon
+    var popup_flor = "MyLabel";
+    var content_flor = "MyContent";
+    var color = 'blue';
+    var poly = new L.Polygon({% coordinates %}, { 'label': popup_flor, 'popup': content_flor, 'otherStuff': 'abc123', 'color': 'red', 'weight': 2, 'fillColor': '#{% hex_color %}', 'fillOpacity': 0.45 });
+    //poly.on('click', onPolyClick);
+
+    poly.bindPopup(L.popup(maxHeight = 500, className = 'custom-popup')
+        .setContent(`{% popup %}`)
+    )
+
+    //Add polygon to map
+    poly.addTo(map);
+
+</script>

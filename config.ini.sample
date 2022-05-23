@@ -1,0 +1,24 @@
+[IP]
+KF_1 = 140.116.X.X.X
+KF_2 = 140.116.X.X.X
+KF_3 = 140.116.X.X.X
+SL_1 = 140.116.X.X
+SL_2 = 140.116.X.X
+SL_3 = 140.116.X.X
+SL_4 = 140.116.X.X
+SL_6_S = 140.116.X.X
+SL_6_N = 140.116.X.X
+SL_8_S = 140.116.X.X
+SL_8_N = 140.116.X.X
+SL_9 = 140.116.X.X
+CY_1 = 140.116.X.X
+CY_3_S = 140.116.X.X
+CY_3_N = 140.116.X.X
+
+[Directory]
+HTML_DIR = /var/www/mrtg
+CLASSIFIED_DIR = /home/username/classified
+CSV_DIR = /home/username/src/csv
+TEMPLATE_DIR = /home/username/src/templates
+CONFIG_JSON_DIR = /home/username/src/jsons
+OUTPUT_DIR = <netgraph project partial view dir>

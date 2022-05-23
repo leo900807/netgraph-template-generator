@@ -1,0 +1,5 @@
+#!/bin/bash
+
+SCRIPT_PATH="/home/username/netgraph-template-generator"  # Change to your directory
+python3 ${SCRIPT_PATH}/current_flow_average.py
+python3 ${SCRIPT_PATH}/colorize.py

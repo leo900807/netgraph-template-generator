@@ -1,0 +1,6 @@
+            <tr>
+                <th class="floor">{% floor %}</th>
+                <td>
+                    <div style="background-color: #{% hex_color %}; height: 10px; width: 80%"> </div>
+                </td>
+            </tr>

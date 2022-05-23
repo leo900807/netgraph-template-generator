@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <% if(typeof userid != 'undefined'){ %>
+        <table width="100%" class="table-page" cellpadding="10px">
+    <% } else{ %>
+        <table width="100%" class="table-page">
+    <% } %>
+        <tr>
+            <% if(typeof userid != 'undefined'){ %>
+                <th align="center" style="width: 35%">{% dorm_name %}</th>
+                <td colspan="3">
+            <% } else{ %>
+                <th width="30%">{% dorm_name %}</th>
+                <td>
+            <% } %>
+                <div style="display: flex">
+                    <% if(typeof userid != 'undefined'){ %>
+                        <div style="margin-right: auto">0%~20%</div>
+                    <% } else{ %>
+                        <div style="margin-right: 21px">0%~20%</div>
+                    <% } %>
+                    <div style="background-color: #29ff29; height: 10px; width: 50%"> </div>
+                </div>
+
+                <div style="display: flex">
+                    <% if(typeof userid != 'undefined'){ %>
+                        <div style="margin-right: auto">20%~60%</div>
+                    <% } else{ %>
+                        <div style="margin-right: 13px">20%~60%</div>
+                    <% } %>
+                    <div style="background-color: #ffff29; height: 10px; width: 50%"> </div>
+                </div>
+
+                <div style="display: flex">
+                    <% if(typeof userid != 'undefined'){ %>
+                        <div style="margin-right: auto">60%~100%</div>
+                    <% } else{ %>
+                        <div style="margin-right: 5px">60%~100%</div>
+                    <% } %>
+                    <div style="background-color: #ff2929; height: 10px; width: 50%"> </div>
+                </div>
+            </td>
+        </tr>
+        <% if(typeof userid != 'undefined'){ %>
+            <tr>
+                <th align="center">
+                    Port
+                </th>
+                <th align="center">
+                    Current
+                </th>
+                <th align="center">
+                    Max
+                </th>
+                <th align="center">
+                    Status
+                </th>
+            </tr>
+        <% } else{ %>
+            <tr>
+                <th align="center">
+                    Floor
+                </th>
+                <th align="center">
+                    Status
+                </th>
+            </tr>
+        <% } %>
+        <% if(typeof userid != 'undefined'){ %>
+{% port_data %}
+        <% } else{ %>
+{% floor_data %}
+        <% } %>
+
+    </table>
+</body>
+
+</html>

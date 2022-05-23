@@ -1,0 +1,10 @@
+            <tr class="port">
+                <th align="center">{% port %}</th>
+                <td align="center">{% percentage %} %</td>
+                <td align="center">{% port_mx %}<br>MB/s</td>
+                <td align="center">
+                    <div style="border: 2px solid #{% hex_color %}; height: 10px; padding: 0px">
+                        <div class="color-bar" style="background-color: #{% hex_color %}; width: {% percentage %}%"></div>
+                    </div>
+                </td>
+            </tr>
